@@ -1,0 +1,22 @@
+# Delhi Crowdedness-Aware Journey Planner — minimal, fast dependencies.
+# Install with:  pip install -r requirements.txt
+
+# --- Backend API ---
+fastapi>=0.110
+uvicorn[standard]>=0.29
+orjson>=3.9
+
+# --- Fast columnar ingestion (Part 1 & preprocessing) ---
+polars>=1.0
+pyarrow>=14.0
+
+# --- Crowdedness ML engine (Part 2) ---
+lightgbm>=4.0
+scikit-learn>=1.3
+numpy>=1.26
+pandas>=2.0
+matplotlib>=3.8
+
+# --- Live GTFS-RT tracker (Part 3) ---
+httpx>=0.27
+gtfs-realtime-bindings>=1.0

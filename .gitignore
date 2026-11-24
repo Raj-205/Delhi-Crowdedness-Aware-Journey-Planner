@@ -1,0 +1,49 @@
+# ============================================================
+# Delhi Crowdedness-Aware Journey Planner — .gitignore
+# Raw hackathon datasets and private keys must NEVER be pushed.
+# ============================================================
+
+# --- Raw datasets (hackathon data: ETM tickets + static GTFS) ---
+data/raw/
+
+# --- Processed artifacts (all regenerable via the 3 scripts) ---
+data/processed/*.pkl
+data/processed/*.parquet
+data/processed/*.txt
+data/processed/*.png
+data/processed/*.json
+!data/processed/.gitkeep
+
+# --- Secrets & API keys ---
+.env
+*.env
+!.env.example
+
+# --- GTFS-RT protobuf snapshots / binary caches ---
+*.pb
+
+# --- Python build & cache artifacts ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# --- IDE / editor ---
+.idea/
+.vscode/
+*.swp
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+
+# --- Logs & temp ---
+*.log
+tmp/
+.tmp/
